@@ -6,7 +6,7 @@ public class AddressTest {
         Address add2 = new Address(33, "Jangpura", "Delhi", 110014);
         System.out.println(add2);
         add2.changePinCode(100241);
-        System.out.println(add2);
+        System.out.println(add2.toString());
         System.out.println(add.city);
     }
 }
