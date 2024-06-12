@@ -1,15 +1,24 @@
 package com.lnt;
 
 public class ContractualEmployee extends Employee {
+
+    double payPerMonth;
     
-    public ContractualEmployee(int i, String string, int j) {
-        this.id = i;
-        this.name = string;
-        this.setSalary(j);
+    public ContractualEmployee(int id, String name, double payPerMonth) {
+       super(id, name);
+        this.payPerMonth = payPerMonth;
+       
     }
 
     @Override
     void incrementSalary() {
-       this.setSalary(this.getSalary() + 5000);
+       this.payPerMonth += 5000;
     }
+
+    @Override
+    public String toString() {
+        return "ContractualEmployee [payPerMonth=" + payPerMonth + ", id=" + id + ", name=" + name + "]";
+    }
+
+    
 }

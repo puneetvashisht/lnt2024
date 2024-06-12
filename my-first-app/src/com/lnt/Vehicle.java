@@ -3,6 +3,7 @@ package com.lnt;
 public class Vehicle extends Object {
     int maxSpeed;
     String color;
+    // int wheels;
 
     public Vehicle(){
         
@@ -11,10 +12,15 @@ public class Vehicle extends Object {
         this.maxSpeed = maxSpeed;
         this.color = color;
     }
-    // @Override
-    // public String toString() {
-    //     return "Vehicle [maxSpeed=" + maxSpeed + ", color=" + color + "]";
+
+    // public void start(){
+    //     System.out.println("Vehicle starting...");
     // }
+
+    @Override
+    public String toString() {
+        return "Vehicle [maxSpeed=" + maxSpeed + ", color=" + color + "]";
+    }
 
 
     
