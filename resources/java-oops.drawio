@@ -1,0 +1,43 @@
+<mxfile host="65bd71144e">
+    <diagram id="xORF5XNg9UXxYAXBBXNX" name="Page-1">
+        <mxGraphModel dx="576" dy="300" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="2" value="EMPLOYEE" style="whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+                    <mxGeometry x="330" y="50" width="80" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="5" style="edgeStyle=none;html=1;" edge="1" parent="1" source="3" target="2">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="3" value="REGULAR&amp;nbsp;&lt;br&gt;EMPLOYEE" style="whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+                    <mxGeometry x="150" y="240" width="80" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="6" style="edgeStyle=none;html=1;entryX=1;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="4" target="2">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="4" value="CONTRACT&lt;br&gt;EMPLOYEE" style="whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+                    <mxGeometry x="500" y="240" width="80" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="7" value="id&lt;br&gt;name&lt;br&gt;- &lt;font color=&quot;#ff3333&quot;&gt;salary&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+                    <mxGeometry x="420" y="50" width="60" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="9" style="edgeStyle=none;html=1;fontColor=#FF3333;" edge="1" parent="1" source="8" target="3">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="8" value="MANAGER" style="whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+                    <mxGeometry x="150" y="390" width="80" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="11" value="&lt;font color=&quot;#ffccff&quot;&gt;VEHICLE&lt;br&gt;&lt;br&gt;maxSpeed&lt;br&gt;color&lt;br&gt;&lt;/font&gt;" style="whiteSpace=wrap;html=1;aspect=fixed;fontColor=#FF3333;" vertex="1" parent="1">
+                    <mxGeometry x="330" y="550" width="80" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="13" style="edgeStyle=none;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;fontColor=#FFCCFF;" edge="1" parent="1" source="12" target="11">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="12" value="&lt;font color=&quot;#ffccff&quot;&gt;CAR&lt;br&gt;&lt;br&gt;isAutomatic&lt;br&gt;&lt;/font&gt;" style="whiteSpace=wrap;html=1;aspect=fixed;fontColor=#FF3333;" vertex="1" parent="1">
+                    <mxGeometry x="330" y="720" width="80" height="80" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
