@@ -2,6 +2,6 @@ package com.lnt;
 
 public interface Perks {
     
-    void medicalAssurance();
+   public abstract void medicalAssurance();
     void foodCoupon();
 }
