@@ -9,6 +9,8 @@ public class EmployeeALDemo {
      List<Employee> employees = new LinkedList<>();
      Employee e1 = new Employee(23, "abc");
      employees.add(e1);
+    //  e1.COMPANY_NAME
+    System.out.println(Employee.COMPANY_NAME);
      Employee e2 = new Employee(3, "axy");
      employees.add(e2);
     Employee e3 = new Employee(23, "abcd");
