@@ -26,13 +26,13 @@ public class ThreadDemo {
         long endTime = System.currentTimeMillis();
         System.out.println(" Total time taken : " + (endTime-startTime));
 
-        // for(int i=0;i<10;i++){
-        // Runnable runnable = new MyRunnable();
-        // Thread t = new Thread(runnable);
-        // t.start();
-        // }
-        // System.out.println("allz is well! run by " +
-        // Thread.currentThread().getName());
+        for(int i=0;i<10;i++){
+        Runnable runnable = () -> System.out.println("run by" + Thread.currentThread().getName());
+        Thread t = new Thread(runnable);
+        t.start();
+        }
+        System.out.println("allz is well! run by " +
+        Thread.currentThread().getName());
 
     }
 }
