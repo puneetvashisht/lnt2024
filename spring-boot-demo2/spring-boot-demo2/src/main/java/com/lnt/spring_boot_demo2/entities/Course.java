@@ -2,8 +2,8 @@ package com.lnt.spring_boot_demo2.entities;
 
 public class Course {
     public int id;
-    String title;
-    double price;
+    public String title;
+    public double price;
     public Course(){
 
     }
