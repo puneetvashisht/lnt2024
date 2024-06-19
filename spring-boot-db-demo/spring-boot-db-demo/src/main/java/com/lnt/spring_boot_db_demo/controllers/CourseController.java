@@ -33,8 +33,8 @@ public class CourseController {
     }
 
     @GetMapping("/courses/by")
-    public Course fetchCourseByName(@RequestParam("title") String title){
-        Course course = courseRepository.findByTitle(title);
+    public Course fetchCourseByName(@RequestBody Course c){
+        Course course = courseRepository.findCourseDistictByTitleAndPrice(c.getTitle(), c.getPrice());
         return course;
     }
 
@@ -57,6 +57,12 @@ public class CourseController {
     public List<Course> fetchAllCourses() {
         return courseRepository.findAll();
     }
+
+    @GetMapping("/courses/orderby")
+    public List<Course> fetchAllCoursesOrderByTitle() {
+        return courseRepository.findCourseByOrderByTitleAsc();
+    }
+
     @DeleteMapping("/courses/{id}")
     @ResponseStatus(HttpStatus.NO_CONTENT)
     public void deleteCourse(@PathVariable("id") int id){
