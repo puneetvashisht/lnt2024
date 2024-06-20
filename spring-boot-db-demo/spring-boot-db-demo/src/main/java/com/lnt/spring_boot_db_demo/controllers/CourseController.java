@@ -43,6 +43,12 @@ public class CourseController {
         return course;
     }
 
+    @GetMapping("/courses/salary/{minPrice}/{maxPrice}")
+    public List<Course> fetchCourseBySalaryBt(@PathVariable("minPrice") double minPrice,@PathVariable("maxPrice") double maxPrice ){
+        List<Course> course = courseRepository.findCourseByPriceQuery(minPrice, maxPrice);
+        return course;
+    }
+
     @GetMapping("/courses/{id}")
     public ResponseEntity<Course> fetchACourse(@PathVariable("id") int id){
         ResponseEntity<Course> re = null;
