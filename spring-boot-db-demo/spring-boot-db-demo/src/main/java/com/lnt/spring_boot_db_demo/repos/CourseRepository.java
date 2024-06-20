@@ -12,5 +12,6 @@ public interface CourseRepository extends JpaRepository<Course, Integer>{
     Course findByTitle(String title);
     Course findCourseDistictByTitleAndPrice(String title, Double price);
     List<Course> findCourseByOrderByTitleAsc();
+    List<Course> findByPriceGreaterThan(double price);
    // findByPriceAndTitle
 }

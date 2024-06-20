@@ -37,6 +37,11 @@ public class CourseController {
         Course course = courseRepository.findCourseDistictByTitleAndPrice(c.getTitle(), c.getPrice());
         return course;
     }
+    @GetMapping("/courses/salary/{gtPrice}")
+    public List<Course> fetchCourseByName(@PathVariable("gtPrice") double price){
+        List<Course> course = courseRepository.findByPriceGreaterThan(price);
+        return course;
+    }
 
     @GetMapping("/courses/{id}")
     public ResponseEntity<Course> fetchACourse(@PathVariable("id") int id){
