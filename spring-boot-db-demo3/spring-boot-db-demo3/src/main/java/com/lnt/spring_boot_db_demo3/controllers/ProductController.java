@@ -5,6 +5,11 @@ import org.springframework.web.bind.annotation.RestController;
 import com.lnt.spring_boot_db_demo3.entities.Product;
 import com.lnt.spring_boot_db_demo3.repos.ProductRepository;
 
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.media.Content;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.responses.ApiResponse;
+import io.swagger.v3.oas.annotations.responses.ApiResponses;
 import lombok.extern.slf4j.Slf4j;
 
 import java.util.List;
@@ -23,13 +28,21 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 @RestController
 @RequestMapping("/api/v1")
-@Slf4j
+//@Slf4j
 public class ProductController {
-// Logger log = LoggerFactory.getLogger(ProductController.class);
+ Logger log = LoggerFactory.getLogger(ProductController.class);
 
+@Operation(summary = "Get a book by its id")
+@ApiResponses(value = { 
+  @ApiResponse(responseCode = "200", description = "Found the book", 
+    content = { @Content(mediaType = "application/json", 
+      schema = @Schema(implementation = Product.class)) }),
+  @ApiResponse(responseCode = "400", description = "Invalid id supplied", 
+    content = @Content), 
+  @ApiResponse(responseCode = "404", description = "Book not found", 
+    content = @Content) })
 
-
-    @RequestMapping("/")
+    @GetMapping("/")
     public String index() {
        log.trace("A TRACE Message");
        log.debug("A DEBUG Message");
