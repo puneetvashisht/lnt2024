@@ -1,0 +1,19 @@
+<html>
+  <head></head>
+  <body>
+    <div class="clock"><span id="time"></span></div>
+    <script>
+      function updateTime() {
+        const timeElement = document.getElementById("time");
+        const now = new Date();
+        const hours = now.getHours();
+        const minutes = now.getMinutes();
+        const seconds = now.getSeconds();
+        const formattedTime = hours + ":" + minutes + ":" + seconds;
+        timeElement.innerHTML = formattedTime;
+      }
+      updateTime();
+      setInterval(updateTime, 1000);
+    </script>
+  </body>
+</html>

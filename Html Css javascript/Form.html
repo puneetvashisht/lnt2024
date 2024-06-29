@@ -1,0 +1,18 @@
+<html>
+  <head></head>
+  <body>
+    <input type="number" id="operand1" />
+    <input type="number" id="operand2" />
+    <button onclick="add()">Add</button>
+    <p id="result"></p>
+    <script>
+      function add() {
+        var operand1 = document.getElementById("operand1").value;
+        var operand2 = document.getElementById("operand2").value;
+        var result = parseInt(operand1) + parseInt(operand2);
+        console.log(result);
+        document.getElementById("result").innerHTML = result;
+      }
+    </script>
+  </body>
+</html>
