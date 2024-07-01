@@ -30,7 +30,7 @@ export default {
                 },
                 body: JSON.stringify(this.course)
             })
-            .then(res=> console.log(res.status))
+            .then(res=> {console.log(res.status)})
         }
     }
 }
