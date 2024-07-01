@@ -1,0 +1,36 @@
+<html>
+<head>
+    <title>View Employees</title>
+</head>
+<body>
+    <div>
+        <button onclick="loadCourses()">Load Courses</button>
+    </div>
+    <table border="1">
+        <div id="content"></div>
+    </table>
+
+    <script>
+        function loadCourses(){
+            fetch('http://localhost:5000/courses')
+            .then(res => res.json())
+            .then(data =>{
+                console.log(data);
+                let htmlStr = ''
+                data.forEach(course => {
+                    console.log(course);  
+                    let row = `<tr>
+                                <td>${course.title}</td>
+                                 <td>${course.price}</td>
+                                </tr>`
+                    htmlStr += row;
+                });
+                console.log(htmlStr);
+                // document.getElementById('content').innerHTML = htmlStr;
+                // document.getElementsByTagName('table')[]
+                document.getElementsByTagName('table')[0].innerHTML= htmlStr;
+            })
+        }
+    </script>
+</body>
+</html>
