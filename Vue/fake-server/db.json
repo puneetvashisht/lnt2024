@@ -1,0 +1,21 @@
+{
+  "courses": [
+    {
+      "id": "1",
+      "title": "Angular",
+      "price": 33333.33
+    }
+  ],
+  "employees": [
+    {
+      "id": 1,
+      "name": "Ravi",
+      "salary": 34343.34
+    },
+    {
+      "id": "9211",
+      "name": "Priya",
+      "salary": 34343.34
+    }
+  ]
+}

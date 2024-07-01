@@ -45,7 +45,7 @@ export default {
     },
     mounted() {
         console.log(`the component is now mounted.`)
-        fetch('http://localhost:5000/courses')
+        fetch('http://localhost:6000/courses')
             .then(res => res.json())
             .then(data => {
                 console.log(data)
