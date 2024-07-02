@@ -19,6 +19,9 @@
         <li class="nav-item">
             <RouterLink class="nav-link active" to="/addcourse">Add Course</RouterLink>
         </li>
+        <li class="nav-item">
+            <RouterLink class="nav-link active" to="/course/2627">Course</RouterLink>
+        </li>
       </ul>
     </div>
   </div>

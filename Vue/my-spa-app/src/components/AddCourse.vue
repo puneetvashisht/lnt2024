@@ -14,6 +14,7 @@
 </template>
 
 <script>
+import CourseService from '../services/CourseService.js'
 export default {
     data() {
         return {
@@ -23,13 +24,14 @@ export default {
     methods: {
         addCourse() {
             console.log('Add a course', this.course);
-            fetch('http://localhost:3000/courses', {
-                method: 'POST',
-                headers: {
-                    'content-type': 'application/json'
-                },
-                body: JSON.stringify(this.course)
-            })
+            // fetch('http://localhost:3000/courses', {
+            //     method: 'POST',
+            //     headers: {
+            //         'content-type': 'application/json'
+            //     },
+            //     body: JSON.stringify(this.course)
+            // })
+            CourseService.createCourse(this.course)
             .then(res=> {
                 console.log(res.status)
                 if(res.status === 201){
