@@ -1,19 +1,32 @@
 <template>
-<div class="container text-center">
-    <div class="row">
 
-    <Card v-for="course in courses" :title="course.title"></Card>
-   </div>
-   </div>
+<div v-show="message" class="alert alert-success" role="alert">
+   {{ message }}
+</div>
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Title</th>
+                <th scope="col">Price</th>
+                <th scope="col">Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr v-for="course in courses">
+                <th scope="row">{{ course.id }}</th>
+                <td>{{ course.title }}</td>
+                <td>{{ course.price }}</td>
+                <td><button @click="deleteCourse(course.id)" class="btn btn-danger"> X </button> <button @click="navigate(course.id)" class="btn btn-primary"> View </button></td>
+            </tr>
+
+        </tbody>
+    </table>
 </template>
 <script>
 import axios from 'axios'
 import CourseService from '../services/CourseService.js'
-import Card from './Card.vue'
 export default {
-    components: {
-        Card
-    },
     data: function () {
         return {
             courses: []

@@ -1,6 +1,8 @@
 <script setup>
+import Card from './components/Card.vue';
 import { computed } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
+
 
 const router = useRouter()
 const route = useRoute()
@@ -20,4 +22,7 @@ const search = computed({
   <label>
     Search: <input v-model.trim="search" maxlength="20">
   </label>
+  <Card title="Angular"></Card>
+  <Card title="React"></Card>
+  <Card title="Vue"></Card>
 </template>
