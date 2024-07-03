@@ -1,7 +1,10 @@
 <template>
 <div class="container text-center">
     <div class="row">
-
+        <div class="input-group mb-3">
+  <span class="input-group-text" id="basic-addon1">Search Course</span>
+  <input v-model="search" @change="handleChange" type="search" class="form-control" placeholder="Enter Course Name To Search" aria-label="Username" aria-describedby="basic-addon1">
+</div>
     <Card v-for="course in courses" :title="course.title"></Card>
    </div>
    </div>
@@ -16,11 +19,17 @@ export default {
     },
     data: function () {
         return {
-            courses: []
+            courses: [],
+            search: ''
         }
        
     },
     methods: {
+        handleChange(){
+            console.log('Change event', this.search)
+            let searchedCourses = this.courses.filter((c)=> c.title.startsWith(this.search))
+            this.courses = searchedCourses
+        },
         navigate(courseId){
             this.$router.push({ name: 'course', params: { id: courseId } })
         },
